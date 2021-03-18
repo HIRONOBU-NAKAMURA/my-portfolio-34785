@@ -7,7 +7,7 @@
   </span>
   <span class="timestamp">
     投稿日時 <%= time_ago_in_words(post.created_at) %> ago.
-    <% if current_user.id == post.user.id %>
+    <% if user_signed_in? && current_user.id != nil && current_user.id == post.user.id %>
     <%= link_to "削除", post_path(post.id), method: :delete,data: { confirm: "本当に削除しても良いですか？"}%>
     <% end %>
   </span>
