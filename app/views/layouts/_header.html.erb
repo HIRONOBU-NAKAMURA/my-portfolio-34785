@@ -7,7 +7,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "ホーム",   root_path ,class: "link-nav"%></li>
         <% if user_signed_in? %>
-          <li><%= link_to "ユーザー一覧",  my_accounts_path,class: "link-nav" %></li>
+          <li><%= link_to "全てのユーザー",  my_accounts_path,class: "link-nav" %></li>
           <li><%= link_to "イベント",   '#',class: "link-nav" %></li>
           <li class="dropdown" style="width: 160px;">
             <a href="#" class="dropdown-toggle link-nav" data-toggle="dropdown">
