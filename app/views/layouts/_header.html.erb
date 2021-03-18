@@ -20,7 +20,7 @@
             </ul>
           </li>
             <%# <li><%= link_to "プロフィール", "/users/#{current_user.id}",class: "link-nav" %></li>
-            <li><%= link_to "プロフィール", static_page_path(current_user.id),class: "link-nav" %></li>
+            <li><%= link_to "プロフィール", my_account_path(current_user.id),class: "link-nav" %></li>
               <li>
                 <%= link_to "ログアウト", destroy_user_session_path, method: :delete ,class: "link-nav"%>
               </li>
