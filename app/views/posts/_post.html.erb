@@ -1,0 +1,14 @@
+<li id="posts-<%= post.id %>">
+  <%= link_to gravatar_for(post.user), my_account_path(post.user) %>
+  <span class="user"><%= link_to post.user.name, my_account_path(post.user) %></span>
+  <span class="content">
+    <%= post.content %>
+    <%= image_tag post.display_image if post.image.attached? %>
+  </span>
+  <span class="timestamp">
+    投稿日時 <%= time_ago_in_words(post.created_at) %> ago.
+    <% if current_user.id == post.user.id %>
+    <%= link_to "削除", post_path(post.id), method: :delete,data: { confirm: "本当に削除しても良いですか？"}%>
+    <% end %>
+  </span>
+</li>

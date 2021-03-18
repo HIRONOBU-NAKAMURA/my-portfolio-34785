@@ -232,11 +232,13 @@ input {
   }
 }
 
-/* microposts */
+/* posts */
 
-.microposts {
+.posts {
   list-style: none;
   padding: 0;
+  display: flex;
+  flex-direction: column;
   li {
     padding: 10px 0;
     border-top: 1px solid #e8e8e8;
@@ -278,6 +280,7 @@ span.image {
     border: 0;
   }
 }
+
 .link-wrapper {
   display: flex;
   justify-content: space-around;
