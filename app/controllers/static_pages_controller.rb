@@ -1,10 +1,11 @@
 class StaticPagesController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
   def index
+    @user = User.all
   end
 
   def show
-    # @user = User.find(params[:id])
+    @user = User.find(params[:id])
   end
 
   private
