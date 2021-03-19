@@ -3,12 +3,18 @@
   <span class="user"><%= link_to post.user.name, my_account_path(post.user) %></span>
   <span class="content">
     <%= post.content %>
-    <%= image_tag post.display_image if post.image.attached? %>
-  </span>
-  <span class="timestamp">
-    投稿日時 <%= time_ago_in_words(post.created_at) %> ago.
-    <% if user_signed_in? && current_user.id != nil && current_user.id == post.user.id %>
-    <%= link_to "削除", post_path(post.id), method: :delete,data: { confirm: "本当に削除しても良いですか？"}%>
+    <div style="margin-bottom: 10px">
+      <%= image_tag post.display_image if post.image.attached? %>
+    </div>
+    <% if user_signed_in? %>
+    <%= link_to "コメントする", post_path(post.id), class: "comment-border"%>
     <% end %>
   </span>
+  <div class="timestamp" style="margin-top: 20px">
+    投稿日時 <%= time_ago_in_words(post.created_at) %> ago.
+    <% if user_signed_in?  && current_user.id == post.user.id %>
+    <%= link_to "削除", post_path(post.id), method: :delete,data: { confirm: "本当に削除しても良いですか？"}, class: "btn-danger delete-btn"%>
+
+    <% end %>
+  </div>
 </li>

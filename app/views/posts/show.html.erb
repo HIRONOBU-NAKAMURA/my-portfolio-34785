@@ -1,0 +1,19 @@
+<h1>投稿詳細ページ</h1>
+  <h3><%= gravatar_for @user %><%= @user.name %></h3>
+  <h3><%= @post.content %></h3>
+<%= image_tag @post.display_image if @post.image.attached? %>
+
+<h2>コメント一覧</h2>
+  <% @comments.each do |comment| %>
+    <p style="margin-left: 70px; margin-bottom: 20px;">
+      <strong><%= link_to comment.user.name, my_account_path(comment.user.id) %>：</strong>
+      <%= comment.text %>
+    </p>
+  <% end %>
+
+<%= form_with model: [@post, @comment],local: true,class: "form-flex" do |f| %>
+  <%= f.text_area :text ,placeholder: "コメントする" ,class: "comment-height-width"%>
+  <br>
+  <%= f.submit '保存' ,class: "btn btn-primary btn-style"%>
+<%= link_to "ホームへ戻る", all_posts_path ,class: "home-btn-margin"%>
+<% end %>

@@ -1,27 +1,29 @@
 class MyAccountsController < ApplicationController
-
   def index
     @users = User.paginate(page: params[:page], per_page: 20)
   end
+
   def show
     @user = User.find(params[:id])
     @posts = @user.posts.paginate(page: params[:page])
   end
+
   def edit
     @user = User.find(params[:id])
   end
+
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-      redirect_to my_account_path(params[:id])
+      redirect_to root_path
     else
-      render 'edit'
+      render :edit
     end
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:name,:email,:password,:password_confirmation)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 end
