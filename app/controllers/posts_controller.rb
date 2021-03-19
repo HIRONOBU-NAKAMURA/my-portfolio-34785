@@ -1,4 +1,12 @@
 class PostsController < ApplicationController
+
+  def show
+    @post = Post.find(params[:id])
+    @user = @post.user
+    @comment = Comment.new
+    @comments = @post.comments.includes(:user)
+  end
+
   def create
     @post = current_user.posts.build(post_params)
     @post.image.attach(params[:post][:image])

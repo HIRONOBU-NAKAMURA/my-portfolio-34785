@@ -15,9 +15,9 @@ class MyAccountsController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-      redirect_to my_account_path(params[:id])
+      redirect_to root_path
     else
-      render 'edit'
+      render :edit
     end
   end
 

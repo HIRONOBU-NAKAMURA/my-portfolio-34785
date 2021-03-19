@@ -16,7 +16,8 @@
   </div>
 <% else %>
 <div class="center jumbotron">
-  <h1>Rails 勉強会</h1>
+  <h1><%= link_to image_tag("rails.svg", alt: "Rails logo", width: "200px",class: 'image-line'),
+                      "https://railsguides.jp/getting_started.html" ,target: :_blank%>勉強会</h1>
 
   <h2 class="line-set">
     Rails勉強会とはRailsを勉強し始めた方や、Railsが好きな方、RubyやRailsを学びたい方が自分の考えや学習記録をアウトプットするための学習コミュニティーアプリケーションです！みんなでレベルアップをしましょう！！
@@ -38,6 +39,3 @@
   <%= will_paginate @all_posts,params: { controller: :static_pages,action: :index } , previous_label: '&lt 前へ', next_label: '次へ &gt'%>
 
 <% end %>
-
-<%#= link_to image_tag("rails.svg", alt: "Rails logo", width: "200px"),
-                      "https://rubyonrails.org/" %>
