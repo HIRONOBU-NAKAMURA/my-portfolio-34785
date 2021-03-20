@@ -355,3 +355,66 @@ span.image {
     width: 10%;
   }
 }
+
+/*ruby document */
+
+.ruby-document {
+  height: 100%;
+}
+
+.ruby-doc-header {
+  background-color: #f8f9fc;
+  border: double #8f8f8f;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.ruby-doc-topic {
+  border-bottom: 2px solid #333;
+  padding-bottom: 20px;
+}
+
+.topic-div {
+  margin-bottom: 15px;
+  a {
+    font-size: 20px;
+    text-decoration: none;
+  }
+}
+
+.topic-margin-right {
+  margin-right: 10px;
+}
+.topic-margin-left {
+  margin-left: 10px;
+  color: gray;
+}
+
+/*本文*/
+
+.section-sentence {
+  background-color: #f8f9fc;
+}
+
+.section-span {
+  border-bottom: 1px solid red;
+}
+
+.section-code {
+  color: #333;
+  background-color: #f8f9fc;
+}
+
+.section-table {
+  margin: 20px 0;
+  border: 2px solid lightblue;
+  padding: 10px;
+  th {
+    padding: 10px;
+  }
+  td {
+    padding: 10px;
+  }
+}

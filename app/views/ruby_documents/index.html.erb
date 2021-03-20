@@ -1,0 +1,201 @@
+<div class="ruby-document">
+  <div class="ruby-doc-header">
+    <h1>Rubyを学ぼう!!</h1>
+    <hr>
+    <h2>Railsを学ぶためにはRubyの知識が必須です。このページを通してRubyに触れてみましょう!!</h2>
+  </div>
+
+  <div class="ruby-doc-topic">
+    <div class="topic-1 topic-div">
+      <a href="#section-1">
+        <span class="topic-margin-right">第１章</span>Rubyとは<span class="topic-margin-left">(Rubyとは何か、Rubyの歴史などを紹介します)</span>
+      </a>
+    </div>
+    <div class="topic-2 topic-div">
+      <a href="#section-2">
+        <span class="topic-margin-right">第２章</span>Rubyの基礎文法<span class="topic-margin-left">(Rubyの基礎的な文法を紹介します)</span>
+      </a>
+    </div>
+    <div class="topic-3 topic-div">
+      <a href="#section-3">
+        <span class="topic-margin-right topic-div">第３章</span>Rubyのクラス<span class="topic-margin-left">(Rubyで用いられるクラスという概念について紹介します)</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="ruby-doc-section">
+    <section class="section-1" id="section-1">
+      <h1><span class="topic-margin-right">第１章</span>Rubyとは</h1>
+      <p class="section-sentence">「Ruby」は1993年2月24日生まれ。日本人のまつもとゆきひろさんによって開発されたプログラミング言語で1995年12月に一般公開されました。</p>
+      <p class="section-sentence">
+        開発者のまつもとさんは「Ruby」の設計思想について、「Rubyの言語仕様策定において最も重視しているのはストレスなくプログラミングを楽しむことである。」と述べています。そして、「Ruby」をさらに使いやすくするために、2004年にフレームワークが開発されました。それが「Ruby on Rails（RoR）」です。「Ruby on Rails」はデザインパターンの１つである「Model ViewController（MVC）」アーキテクチャにもとづいて構築されているため、開発を容易にしてくれます。このフレームワークが開発されたことにより、Rubyの人気を一気に上昇させました。このことは「Ruby」の短い歴史の中でも、革命的な出来事でした。
+      </p>
+      <p class="section-sentence">
+        「Ruby」は、フリーソフトのため世界中のプログラマがより良くしようとしていて、日々、進化、改善されていっています。これは、企業が作成したプログラミング言語とは異なる進化をしていきます。企業内では会議などで何の機能を盛り込むかなどの議論するので、バージョンアップの頻度は多くありません。「Ruby」の最大の特徴は、他のプログラミング言語と比較して、少ない行数で作成できることです。さらに「Ruby on Rails」という使い勝手の良いフレームワークが開発されたことにより、Webアプリケーションの開発コストが一気に下がりました。また、アジャイル開発などとも相性が良く、これを実施している企業にとっては、欠かせないプログラミング言語となっています。Rubyは日本国産のプログラミング言語でありますが、海外での需要が急激に広がっています。
+      </p>
+    </section>
+    <section class="section-2" id="section-2">
+      <h1><span class="topic-margin-right">第２章</span>Rubyの基礎文法</h1>
+      <h2>〜Rubyにおける値〜</h2>
+      <p>数や文字をはじめ、プログラムで扱うデータを「値」と言います。
+      プログラミングでは値の種類を明確に分けて扱います。
+      種類によってそれぞれ書き方が異なり、実行できる命令も異なります。</p>
+      <span class="section-span">・文字列</span>
+      <p>
+        文字列は、プログラミングの中で文字を扱うための値です。
+        文字列を生成するには、文字をダブルクォーテーション"またはシングルクォーテーション'で囲みます。以下の例を見てください。
+      </p>
+      <p class="section-code">
+        "This is string."<br>
+        'This is string, too.'
+      </p>
+
+      <span class="section-span">・文字列の連結</span>
+      <p>
+        文字列を連結させるには、文字列同士を+(プラス)で繋ぎます。数式と同じような書き方です。
+        以下の例では、HelloとWorldの文字列が繋がっています。
+      </p>
+      <p class="section-code">
+        irb(main):001:0> "Hello" + "World"<br>
+        => Hello World
+      </p>
+
+      <span class="section-span">・数値</span>
+      <p>
+        数値は、数を表現する値です。文字列とは異なり、計算などを行うことができます。
+        数値は文字列とは違って、ダブルクォーテーション"やシングルクォーテーション'も必要ありません。以下は数値を使った数の表し方の例です。
+      </p>
+      <p class="section-code">
+        # 整数<br>
+        10 <br>
+
+        # 負の値 <br>
+        -10 <br>
+
+        # 小数 <br>
+        3.14 <br>
+      </p>
+      <p>
+        数をダブルクオーテーションで囲むと数値ではなく文字列として扱われてしまいます。
+        プログラミングでは文字列の"10"と数値の10は別物です。数値は計算ができますが、文字列は計算ができません。
+      </p>
+      <h2>数値で計算しよう</h2>
+      <p>
+        数値は文字列とは異なることを学びました。数値は計算できることが特徴です。
+        ここからは、メソッドと同じくプログラムでよく使われる演算子について学びましょう。
+      </p>
+      <span class="section-span">・演算子</span>
+      <p>
+        プログラミングにおける値の計算や比較などに使用する記号のことです。
+        計算における代表的な演算子は+や-、比較における代表的な演算子は&gt;や&lt;があります。
+        この簡単な記号である演算子を用いることで、計算や比較処理を瞬時に行ってくれます。
+      </p>
+      <span class="section-span">・代入演算子</span>
+      <table class="section-table" border="1" >
+        <tr><th>代入演算子</th><th>説明</th></tr>
+        <tr><td> + </td><td>足し算</td></tr>
+        <tr><td> - </td><td>引き算</td></tr>
+        <tr><td> * </td><td>かけ算</td></tr>
+        <tr><td> / </td><td>割り算</td></tr>
+        <tr><td> % </td><td>割ったあまり</td></tr>
+      </table>
+      <p>
+        使い方は、普通の算数の計算と同じです。ただし、剰余の計算は馴染みがないので注意が必要です。例えば、「17を5で割ったときの余り」を求めることができます。以下の例を見てください。
+      </p>
+      <p class="section-code">
+          # 足し算<br>
+          irb(main):001:0> 1000 + 2000<br>
+          => 3000<br>
+
+          # 引き算<br>
+          irb(main):002:0> 3000 - 1500<br>
+          => 1500<br>
+
+          # 掛け算<br>
+          irb(main):003:0> 50 * 40<br>
+          => 2000<br>
+
+          # 割り算<br>
+          irb(main):004:0> 600 / 15<br>
+          => 40<br>
+
+          # 剰余演算（5 ÷ 2をした余り）<br>
+          irb(main):005:0> 5 % 2<br>
+          => 1<br>
+      </p>
+      <h2>〜メソッド〜</h2>
+      <p>
+        メソッドとは、プログラミングにおける何らかの処理をまとめたものです。
+        メソッド名をプログラム中に記述することで、そのメソッドの処理を実行できます。
+      </p>
+      <span class="section-span">・lengthメソッド</span>
+      <p>
+        文字列が持つメソッドです。length（レングス）メソッドは文字列の文字数を数えてくれます。
+        メソッドの使用は、
+        以下のように値に対してメソッド名「length」をドット.で繋ぎ実行します。
+      </p>
+      <p class="section-code">
+        irb(main):001:0> "Hello World".length <br>
+        => 11
+      </p>
+      <span class="section-span">・to_sメソッド</span>
+      <p>
+        数値が持つメソッドです。数値を文字列に変換してくれます。ちなみに、 to_sのsの意味は「string(文字列)」です。以下の例を見てください。
+      </p>
+      <p class="section-code">
+        # 数値「20」にto_sメソッドをつけて実行<br>
+        irb(main):001:0> 20.to_s <br>
+        => "20" <br>
+      </p>
+      <p>
+        to_sメソッドによって、文字列"20"が実行結果になっています。
+        それでは、文字列と数値を連結させて、
+        "i am 20 years old."を表示しましょう。
+      </p>
+
+      <span class="section-span">・to_iメソッド</span>
+      <p>
+        文字列が持つメソッドです。文字列を数値に変換してくれます。ちなみに、 to_iのiの意味は「integer(整数)」です。以下の例を見てください。
+      </p>
+      <p class="section-code">
+        # 文字列「30」にto_iメソッドをつけて実行<br>
+        irb(main):001:0> "30".to_i <br>
+        => 30 <br>
+      </p>
+    </section>
+    <section class="section-3" id="section-3">
+      <h1><span class="topic-margin-right">第３章</span>Rubyのクラス</h1>
+      <h2>〜クラスとインスタンス〜</h2>
+      <span class="section-span">・クラス</span>
+      <p>
+        クラスは、値の元となるものです。値の共通のルールを定義します。
+        ここで決めるルールは、共通の属性と処理（メソッド）です。
+        クラスを使えば、文字列が「こんにちは」や「どうも」という別々のデータを持つことができることと同じように、共通のルールを守った上で個別のデータを作ることもできます。クラスは、共通の属性と処理を決めるだけで、実体がありません。
+      </p>
+      <p class="section-code">
+        class クラス名<br>
+          # 変数やメソッドの定義<br>
+        end <br>
+      </p>
+      <span class="section-span">・インスタンス</span>
+      <p>
+        インスタンスとは、クラスを元にして作られるデータのことです。
+        インスタンスは、クラスと異なり実体を持ちます。
+      </p>
+      <span class="section-span">・newメソッド</span>
+      <p>
+        クラスは、定義しなくてもnewという特別なメソッドをはじめから持っています。
+        newメソッドは、使用したクラスのインスタンスを生成して返します。
+        使い方は以下のようにクラス名に続けて使用します。
+      </p>
+      <p class="section-code">
+        # インスタンスを生成し変数で扱う
+        変数名 = クラス名.new
+      </p>
+      <p>
+        多くの場合、インスタンスを生成したら、再利用するために変数へ代入します。
+        これは、インスタンスを生成したあとからデータを追加したり、メソッドを実行できるようにするためです。
+      </p>
+    </section>
+  </div>
+</div>
