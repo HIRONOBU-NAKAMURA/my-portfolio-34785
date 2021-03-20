@@ -3,6 +3,10 @@ class MyAccountsController < ApplicationController
     @users = User.paginate(page: params[:page], per_page: 20)
   end
 
+  def search
+    @users = User.search(params[:keyword])
+  end
+
   def show
     @user = User.find(params[:id])
     @posts = @user.posts.paginate(page: params[:page])

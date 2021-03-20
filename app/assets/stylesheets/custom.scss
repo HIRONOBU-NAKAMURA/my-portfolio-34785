@@ -339,3 +339,19 @@ span.image {
 .image-line {
   vertical-align: baseline;
 }
+
+.search-form {
+  text-align: center;
+  padding-top: 32px;
+
+  .search-input {
+    width: 30%;
+    margin-right: 10px;
+    height: 35px !important;
+    border-radius: 13px;
+    outline: none;
+  }
+  .search-btn {
+    width: 10%;
+  }
+}
