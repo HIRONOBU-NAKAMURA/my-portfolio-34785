@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   root  'static_pages#index'
   # resources :users, only: :show
   resources :static_pages, only: [:index,:show]
-  resources :my_accounts, only: [:index,:show,:edit,:update]
+  resources :my_accounts, only: [:index,:show,:edit,:update] do
+    collection do
+      get 'search'
+    end
+  end
   resources :posts, only: [:show,:create,:destroy] do
     resources :comments, only: :create
   end

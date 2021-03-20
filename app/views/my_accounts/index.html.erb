@@ -1,6 +1,11 @@
 <% provide(:title, '全てのユーザ一') %>
 <h1 style="border-bottom: 1px solid lightgray; padding-bottom: 15px;">全てのユーザー</h1>
 
+<%= form_with(url: search_my_accounts_path, local: true, method: :get, class: "search-form") do |form| %>
+  <%= form.text_field :keyword, placeholder: "ユーザーを検索する", class: "search-input" %>
+  <%= form.submit "検索", class: "search-btn btn btn-primary" %>
+<% end %>
+
 <%= will_paginate @users , previous_label: '&lt 前へ', next_label: '次へ &gt'%>
 
 <ul class="users">
