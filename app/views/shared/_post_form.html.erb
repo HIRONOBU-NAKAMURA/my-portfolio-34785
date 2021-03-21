@@ -1,7 +1,8 @@
+
 <%= form_with(model: @post, local: true) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
         <div class="field">
-          <%= f.text_area :content, placeholder: "新規投稿をしよう" %>
+          <%= f.text_area :content, placeholder: "新規投稿をしよう" ,class: "post-content"%>
         </div>
         <%= f.submit "投稿", class: "btn btn-primary" %>
         <span class="image">

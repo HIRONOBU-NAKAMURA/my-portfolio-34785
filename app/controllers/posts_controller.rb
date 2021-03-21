@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!, only: [:show, :create,:destroy]
+  before_action :select_item, only: [:show, :destroy]
+
   def show
-    @post = Post.find(params[:id])
     @user = @post.user
     @comment = Comment.new
     @comments = @post.comments.includes(:user)
@@ -19,7 +21,6 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:id])
     @post.destroy
     flash[:success] = '投稿を削除しました'
     redirect_to root_path
@@ -29,5 +30,9 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:content, :image)
+  end
+
+  def select_item
+    @post = Post.find(params[:id])
   end
 end
