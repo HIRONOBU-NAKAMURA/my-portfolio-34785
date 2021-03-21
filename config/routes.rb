@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root  'static_pages#index'
   resources :ruby_documents, only: :index
-  resources :static_pages, only: [:index,:show]
+  resources :static_pages, only: :index
   resources :my_accounts, only: [:index,:show,:edit,:update] do
     collection do
       get 'search'

@@ -24,7 +24,6 @@ $gray-medium-light: #eaeaea;
 body {
   padding-top: 60px;
   font-family: "Kameron", "Noto Sans JP", sans-serif;
-  // background-color: rgb(143, 183, 199);
 }
 
 section {
@@ -81,18 +80,11 @@ p {
   height: 100px;
   display: flex;
   align-items: center;
-  // background-color: rgb(180, 38, 38);
-  // background-color: gray;
   background-color: rgb(204, 70, 70);
-  // margin-bottom: 20px;
 }
 .header-wrapper {
   margin-bottom: 50px;
 }
-
-// .container {
-//   margin-top: 50px;
-// }
 
 #logo {
   float: left;
@@ -104,12 +96,24 @@ p {
   padding-top: 9px;
   font-weight: bold;
   transform: scale(1.5);
-  // transition: transform 0.3s ease 1.6s;
   &:hover {
-    // color: gray;
-    // font-size: 3rem;
     text-decoration: none;
   }
+}
+
+.logo-bg {
+  border-bottom: 3px solid #bbb;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: gainsboro;
+  &:hover {
+    color: white;
+  }
+}
+
+.link-nav {
+  font-size: 20px;
 }
 
 /* footer */
@@ -141,6 +145,10 @@ footer {
 /* sidebar */
 
 aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
   section.user_info {
     margin-top: 20px;
   }
@@ -165,6 +173,9 @@ aside {
     }
   }
 }
+
+/* gravatar画像 */
+
 .gravatar {
   float: left;
   margin-right: 10px;
@@ -268,13 +279,6 @@ input {
   }
 }
 
-aside {
-  textarea {
-    height: 100px;
-    margin-bottom: 5px;
-  }
-}
-
 span.image {
   margin-top: 10px;
   input {
@@ -282,29 +286,16 @@ span.image {
   }
 }
 
-.link-wrapper {
-  display: flex;
-  justify-content: space-around;
-}
-
-.link-child > p {
-  font-size: 20px;
-  text-align: center;
-  margin-top: 10px;
-  color: white;
-}
-
-.link-nav {
-  font-size: 20px;
-}
+/* ホーム画面 */
 
 .line-set {
   line-height: normal;
 }
-.line-setter {
+.image-line {
   vertical-align: baseline;
-  padding-right: 5px;
 }
+
+/* 投稿詳細ページ */
 .comment-height-width {
   height: 120px;
   width: 800px;
@@ -321,6 +312,8 @@ span.image {
   margin-top: 20px;
 }
 
+/* 投稿ページ */
+
 .comment-border {
   color: teal;
   background-color: yellowgreen;
@@ -336,9 +329,7 @@ span.image {
   float: right;
 }
 
-.image-line {
-  vertical-align: baseline;
-}
+/* 検索機能 */
 
 .search-form {
   text-align: center;
@@ -391,8 +382,6 @@ span.image {
   margin-left: 10px;
   color: gray;
 }
-
-/*本文*/
 
 .section-sentence {
   background-color: #f8f9fc;

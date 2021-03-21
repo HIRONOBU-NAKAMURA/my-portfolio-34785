@@ -1,3 +1,4 @@
+<% provide(:title, "投稿一覧") %>
 <%= will_paginate @all_posts,params: { controller: :all_posts,action: :index } , previous_label: '&lt 前へ', next_label: '次へ &gt'%>
 <h3 style="text-align: center;">投稿一覧</h3>
   <% @all_posts.each do |post| %>

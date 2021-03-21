@@ -1,5 +1,5 @@
 class StaticPagesController < ApplicationController
-  before_action :move_to_index, except: [:index, :show]
+  before_action :move_to_index, except: :index
   def index
     if user_signed_in?
       @post = current_user.posts.build if user_signed_in?
@@ -8,8 +8,6 @@ class StaticPagesController < ApplicationController
     @all_posts = Post.order('created_at DESC').paginate(page: params[:page], per_page: 20)
   end
 
-  def show
-  end
 
   private
 
