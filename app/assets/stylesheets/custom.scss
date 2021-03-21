@@ -1,7 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-/* ミックスイン */
+/* ミキシン */
 
 $gray-medium-light: #eaeaea;
 
@@ -139,6 +139,11 @@ footer {
       margin-left: 15px;
     }
   }
+}
+
+.footer-logo {
+  vertical-align: middle;
+  background-color: skyblue;
 }
 
 /* サイドバー */
@@ -285,6 +290,11 @@ span.image {
   }
 }
 
+.post-content {
+  border: 2px solid skyblue;
+  border-radius: 5px;
+}
+
 /* ホーム画面 */
 
 .line-set {
@@ -405,4 +415,11 @@ span.image {
   td {
     padding: 10px;
   }
+}
+
+/* ログインエラーメッセージ */
+
+.login-flash-message {
+  text-align: center;
+  color: red;
 }
