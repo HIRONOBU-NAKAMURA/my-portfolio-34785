@@ -1,5 +1,5 @@
 # メインのサンプルユーザーを1人作成する
-User.create!(name:  "Example User",
+User.create!(name:  "Hironobu Nakamura",
              email: "hironobu9dance@gmail.com",
              password:              "password",
              password_confirmation: "password")
@@ -17,7 +17,7 @@ end
 
 # ユーザーの一部を対象にマイクロポストを生成する
 users = User.order(:created_at).take(10)
-50.times do
-  content = Faker::Lorem.sentence(word_count: 5)
+20.times do
+  content = Faker::Lorem.sentence(word_count: 10)
   users.each { |user| user.posts.create!(content: content) }
 end
