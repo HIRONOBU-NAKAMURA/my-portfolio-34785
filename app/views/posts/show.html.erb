@@ -1,10 +1,7 @@
 <h1 style="border-bottom: 1px solid lightgray; padding-bottom: 15px;">投稿詳細ページ</h1>
   <h3><%= gravatar_for @user %><%= @user.name %></h3>
   <h3><%= @post.content %></h3>
-  <span style="margin-left: 30px">
-    <%= image_tag @post.display_image if @post.image.attached? %>
-  </span>
-
+    <%= image_tag @post.display_image, class: "post-image-tag" if @post.image.attached? %>
 <h2>コメント一覧</h2>
   <% @comments.each do |comment| %>
     <p style="margin-left: 70px; margin-bottom: 20px;">
