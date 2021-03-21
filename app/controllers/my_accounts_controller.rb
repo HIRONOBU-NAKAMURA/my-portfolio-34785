@@ -37,7 +37,6 @@ class MyAccountsController < ApplicationController
   end
 
   def move_to_root
-    @user = User.find(params[:id])
     redirect_to action: :index unless current_user.id == @user.id
   end
 end
