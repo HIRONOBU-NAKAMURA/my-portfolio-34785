@@ -1,7 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-/* mixins, variables, etc.*/
+/* ミックスイン */
 
 $gray-medium-light: #eaeaea;
 
@@ -11,7 +11,7 @@ $gray-medium-light: #eaeaea;
   box-sizing: border-box;
 }
 
-/* miscellaneous */
+/* その他 */
 
 .debug_dump {
   clear: both;
@@ -19,7 +19,7 @@ $gray-medium-light: #eaeaea;
   width: 100%;
   @include box_sizing;
 }
-/* universal */
+/* ページ全体 */
 
 body {
   padding-top: 60px;
@@ -42,7 +42,7 @@ textarea {
   margin-bottom: 10px;
 }
 
-/* typography */
+/* タイポグラフィー */
 
 h1,
 h2,
@@ -74,7 +74,7 @@ p {
   line-height: 1.7em;
 }
 
-/* header */
+/* ヘッダー */
 
 .header {
   height: 100px;
@@ -116,10 +116,9 @@ p {
   font-size: 20px;
 }
 
-/* footer */
+/* フッター */
 footer {
   margin-top: 45px;
-  // padding-top: 5px;
   padding: 60px;
   border-top: 1px solid $gray-medium-light;
   color: $gray-light;
@@ -142,7 +141,7 @@ footer {
   }
 }
 
-/* sidebar */
+/* サイドバー */
 
 aside {
   textarea {
@@ -186,7 +185,7 @@ aside {
   margin-top: 15px;
 }
 
-/* forms */
+/* フォーム */
 
 input,
 textarea,
@@ -243,7 +242,7 @@ input {
   }
 }
 
-/* posts */
+/* 投稿 */
 
 .posts {
   list-style: none;
@@ -347,7 +346,7 @@ span.image {
   }
 }
 
-/*ruby document */
+/* ルビードキュメント */
 
 .ruby-document {
   height: 100%;
