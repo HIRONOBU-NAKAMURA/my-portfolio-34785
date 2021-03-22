@@ -314,6 +314,9 @@ span.image {
 .comment-height-width {
   height: 120px;
   width: 800px;
+  border-radius: 10px;
+  border: 2px solid skyblue;
+  outline: none;
 }
 .form-flex {
   display: flex;
