@@ -9,12 +9,12 @@
         </div>
         <div class="field">
           <%= f.label "メールアドレス" %><br />
-          <%= f.email_field :email,autofocus: true,class: 'from-control' %>
+          <%= f.email_field :email,autofocus: true,class: 'from-control',id: "user_メールアドレス" %>
         </div>
 
         <div class="field">
           <%= f.label "パスワード" %><br />
-          <%= f.password_field :password, class: 'form-control' %>
+          <%= f.password_field :password, class: 'form-control',id: "user_パスワード" %>
         </div>
         <div class="actions">
           <%= f.submit "ログイン",class: "btn btn-primary" %>
