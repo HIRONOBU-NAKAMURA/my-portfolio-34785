@@ -19,6 +19,8 @@ gem 'bootstrap-will_paginate', '1.0.0'
 gem 'bootstrap-sass','3.4.1'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem "aws-sdk-s3", require: false
+gem 'rspec-rails', '~> 4.0.0'
+gem 'factory_bot_rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
