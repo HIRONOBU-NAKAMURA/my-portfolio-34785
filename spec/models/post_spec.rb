@@ -19,12 +19,12 @@ RSpec.describe Post, type: :model do
       it 'コンテンツが空では登録できない' do
         @post.content = ''
         @post.valid?
-        expect(@post.errors.full_messages).to include("Content can't be blank")
+        expect(@post.errors.full_messages).to include("コンテンツを入力してください")
       end
       it 'ユーザーが紐付いていなければ登録できない' do
         @post.user = nil
         @post.valid?
-        expect(@post.errors.full_messages).to include("User must exist")
+        expect(@post.errors.full_messages).to include("Userを入力してください")
       end
     end
   end
