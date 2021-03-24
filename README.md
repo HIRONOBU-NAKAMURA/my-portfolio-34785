@@ -75,6 +75,7 @@ Rails 勉強会では Rails 初学者を対象にしたかったため、どう�
 
 ## ER 図
 
+![demo](https://gyazo.com/2cadb5edfde5614c87bfab26ee33f7fb/raw)
 https://gyazo.com/2cadb5edfde5614c87bfab26ee33f7fb
 
 ## users テーブル
