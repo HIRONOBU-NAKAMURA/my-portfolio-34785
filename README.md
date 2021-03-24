@@ -39,6 +39,7 @@ Rails 勉強会では駆け出しエンジニアの方やプログラミング�
 
 ### ・ログインしていない状態でのトップページ
 
+![demo](https://gyazo.com/ac7d1f0db6737bc2a25801445ac4456e/raw)
 https://gyazo.com/ac7d1f0db6737bc2a25801445ac4456e
 
 ### ・ログイン機能
