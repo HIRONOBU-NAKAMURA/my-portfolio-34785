@@ -40,27 +40,26 @@ Rails 勉強会では駆け出しエンジニアの方やプログラミング�
 ### ・ログインしていない状態でのトップページ
 
 ![demo](https://gyazo.com/ac7d1f0db6737bc2a25801445ac4456e/raw)
-https://gyazo.com/ac7d1f0db6737bc2a25801445ac4456e
 
 ### ・ログイン機能
 
-https://gyazo.com/34189c7968ccd5cd696ad30a6958fa7c
+![demo](https://https://gyazo.com/34189c7968ccd5cd696ad30a6958fa7c/raw)
 
 ### ・ログアウト機能
 
-https://gyazo.com/e482a5de14222df2200d7467c34bcfde
+![demo](https://gyazo.com/e482a5de14222df2200d7467c34bcfde/raw)
 
 ### ・ユーザー一覧機能
 
-https://gyazo.com/88eaea6ded88ee65bfe7148ad6c4da39
+![demo](https://gyazo.com/88eaea6ded88ee65bfe7148ad6c4da39/raw)
 
 ### ・コンテンツ投稿機能
 
-https://gyazo.com/ae9ab4de91fdc6c60fc585197c07e817
+![demo](https://gyazo.com/ae9ab4de91fdc6c60fc585197c07e817/raw)
 
 ### ・コメント機能
 
-https://gyazo.com/eb38a5624505622506ccc20f462e8d6a
+![demo](https://gyazo.com/eb38a5624505622506ccc20f462e8d6a/raw)
 
 # テーブル設計
 
