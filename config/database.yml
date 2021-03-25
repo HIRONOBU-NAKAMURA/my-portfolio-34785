@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: my_portfolio_34785_production
-  username: my_portfolio_34785
-  password: <%= ENV['MY_PORTFOLIO_34785_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
