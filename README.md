@@ -115,6 +115,10 @@ Rails 勉強会では Rails 初学者を対象にしたかったため、どう�
 - belongs_to :user
 - belongs_to :posts
 
+# 開発状況
+
+Ruby/Ruby on Rails/JavaScript/JQuery/BootStrap/MySQL/Github/AWS/EC2/S3/Visual Studio Code
+
 # ローカルでの動作方法
 
 開発環境：
