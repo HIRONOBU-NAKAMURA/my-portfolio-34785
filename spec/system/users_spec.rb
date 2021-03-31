@@ -9,13 +9,13 @@ RSpec.describe 'ユーザー新規登録', type: :system do
       visit root_path
       expect(page).to have_content('新規登録はこちら')
       visit new_user_registration_path
-      fill_in '名前',with: @user.name
-      fill_in 'メールアドレス',with: @user.email
-      fill_in 'パスワード',with: @user.password
-      fill_in 'パスワード（確認）',with: @user.password_confirmation
-      expect{
+      fill_in '名前', with: @user.name
+      fill_in 'メールアドレス', with: @user.email
+      fill_in 'パスワード', with: @user.password
+      fill_in 'パスワード（確認）', with: @user.password_confirmation
+      expect  do
         find('input[name="commit"]').click
-      }.to change { User.count }.by(1)
+      end.to change { User.count }.by(1)
       expect(current_path).to eq(root_path)
       expect(page).to have_no_content('新規登録はこちら')
       expect(page).to have_no_content('ログイン')
@@ -26,13 +26,13 @@ RSpec.describe 'ユーザー新規登録', type: :system do
       visit root_path
       expect(page).to have_content('新規登録はこちら')
       visit new_user_registration_path
-      fill_in '名前',with: ''
-      fill_in 'メールアドレス',with: ''
-      fill_in 'パスワード',with: ''
-      fill_in 'パスワード（確認）',with: ''
-      expect{
+      fill_in '名前', with: ''
+      fill_in 'メールアドレス', with: ''
+      fill_in 'パスワード', with: ''
+      fill_in 'パスワード（確認）', with: ''
+      expect  do
         find('input[name="commit"]').click
-      }.to change { User.count }.by(0)
+      end.to change { User.count }.by(0)
       expect(current_path).to eq('/users')
     end
   end
@@ -47,8 +47,8 @@ RSpec.describe 'ログイン', type: :system do
       visit root_path
       expect(page).to have_content('ログイン')
       visit new_user_session_path
-      fill_in 'メールアドレス',with: @user.email
-      fill_in 'パスワード',with: @user.password
+      fill_in 'メールアドレス', with: @user.email
+      fill_in 'パスワード', with: @user.password
       find('input[name="commit"]').click
       expect(current_path).to eq(root_path)
       expect(page).to have_no_content('新規登録はこちら')
@@ -60,8 +60,8 @@ RSpec.describe 'ログイン', type: :system do
       visit root_path
       expect(page).to have_content('ログイン')
       visit new_user_session_path
-      fill_in 'メールアドレス',with: ''
-      fill_in 'パスワード',with: ''
+      fill_in 'メールアドレス', with: ''
+      fill_in 'パスワード', with: ''
       find('input[name="commit"]').click
       expect(current_path).to eq(new_user_session_path)
     end

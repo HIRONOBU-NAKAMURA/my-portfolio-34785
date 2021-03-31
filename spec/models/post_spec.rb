@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-
   describe '投稿機能' do
     before do
       @post = FactoryBot.build(:post)
@@ -19,12 +18,12 @@ RSpec.describe Post, type: :model do
       it 'コンテンツが空では登録できない' do
         @post.content = ''
         @post.valid?
-        expect(@post.errors.full_messages).to include("コンテンツを入力してください")
+        expect(@post.errors.full_messages).to include('コンテンツを入力してください')
       end
       it 'ユーザーが紐付いていなければ登録できない' do
         @post.user = nil
         @post.valid?
-        expect(@post.errors.full_messages).to include("Userを入力してください")
+        expect(@post.errors.full_messages).to include('Userを入力してください')
       end
     end
   end

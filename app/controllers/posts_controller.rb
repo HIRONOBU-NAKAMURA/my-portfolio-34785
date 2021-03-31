@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, only: [:show, :create,:destroy]
+  before_action :authenticate_user!, only: [:show, :create, :destroy]
   before_action :select_item, only: [:show, :destroy]
 
   def show

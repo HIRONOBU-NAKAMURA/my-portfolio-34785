@@ -1,7 +1,7 @@
 class MyAccountsController < ApplicationController
-  before_action :authenticate_user!, only: [:index, :create,:show,:edit,:update]
-  before_action :set_account, only: [:edit,:update,:show]
-  before_action :move_to_root, only: [:edit,:update]
+  before_action :authenticate_user!, only: [:index, :create, :show, :edit, :update]
+  before_action :set_account, only: [:edit, :update, :show]
+  before_action :move_to_root, only: [:edit, :update]
 
   def index
     @users = User.paginate(page: params[:page], per_page: 20)

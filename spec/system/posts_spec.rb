@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "コンテンツの投稿", type: :system do
+RSpec.describe 'コンテンツの投稿', type: :system do
   before do
     @user = FactoryBot.create(:user)
     @post = FactoryBot.build(:post)
@@ -10,10 +10,10 @@ RSpec.describe "コンテンツの投稿", type: :system do
       sign_in(@user)
       expect(page).to have_content('投稿')
       fill_in 'post_content', with: @post.content
-      attach_file 'post[image]',"public/images/test_image.png"
-      expect{
+      attach_file 'post[image]', 'public/images/test_image.png'
+      expect do
         find('input[name="commit"]').click
-      }.to change { Post.count }.by(1)
+      end.to change { Post.count }.by(1)
       expect(page).to have_content(@post.content)
       expect(current_path).to eq(root_path)
     end
@@ -33,7 +33,7 @@ RSpec.describe 'コンテンツのコメントページ', type: :system do
   it 'ログインしたユーザーはコンテンツコメントページに遷移してコメント投稿欄が表示される' do
     sign_in(@post.user)
     visit post_path(@post)
-    expect(page).to have_content("#{@post.content}")
+    expect(page).to have_content(@post.content.to_s)
     expect(page).to have_selector 'form'
   end
 end
